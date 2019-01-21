@@ -1,16 +1,17 @@
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: 'Lato', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #3c3c3c;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.59;
+  font-weight: 300;
 }
 
 *,
 *:before,
 *:after {
   box-sizing: border-box;
+  transition: 0.5s;
 }
 
 img {
@@ -20,60 +21,100 @@ img {
 
 h1, h2, h3, h4 {
   margin: 0;
-  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 90px;
+  font-weight: 700;
 }
 
 p {
   margin: 0;
+
 }
 
-/*
-a {
+a,
+a:hover,
+a:active {
   text-decoration: none;
+  display: block;
+  color: #000000;
 }
 
-a:hover {
-  text-decoration: underline;
+ul {
+  list-style-type: none;
+  padding: 0;
 }
-*/
+
+button {
+  height: 55px;
+  color: #ffffff;
+  font-size: 20px;
+  border: none;
+  line-height: 55px;
+  box-shadow: 0 1px 7px #9a9a9c;
+}
 
 .wrapper {
-  width: 900px;
+  width: 1170px;
   margin: 0 auto;
-  text-align: center;
 }
 
 header {
-  background: #c2cad6 url("../images/hero-bg.jpg") no-repeat 0 0;
-  background-size: 100% auto;
-  /*min-height: 1072px;*/
-  /*padding: 285px 0 115px 0;*/
+  background: #f9f8fb url("../images/bg-header1.jpg") no-repeat 50% 50%;
+  background-size: auto 100%;
 }
 
 header .wrapper {
-  display: flex;
   position: relative;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 150px;
   height: 100vh;
-  color: #ffffff;
+}
+
+.nav-row {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
   text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
 }
 
-header .wrapper h1 {
-  font-size: 54px;
-  padding: 70px 0 40px 0;
-  line-height: 60px;
-  letter-spacing: 8px;
+header ul li {
+  display: inline-block;
+  margin-left: 35px;
+  /*border-top: 3px solid transparent;*/
 }
 
-header .wrapper p {
-  font-size: 15px;
-  letter-spacing: 1px;
-  line-height: 27px;
+header ul li a {
+  border-top: 3px solid transparent;
 }
+
+header ul li a:hover {
+  border-color: #ff6033;
+}
+
+.home-page {
+  padding-top: 245px;
+}
+
+.home-page__content {
+  width: 370px;
+}
+
+.home-page__content button {
+  width: 200px;
+  background-color: #ff6033;
+}
+
+.home-page__content p {
+  padding: 30px 0;
+}
+
+.home-page__content h2 {
+  font-size: 60px;
+  font-weight: 900;
+}
+
 
 .scroll-to {
   position: absolute;
@@ -82,122 +123,33 @@ header .wrapper p {
   margin: 0 auto;
   bottom: 5%;
   width: 23px;
-  /*margin-top: auto;*/
-  /*margin-bottom: 10%;*/
 }
 
-section {
-  padding: 150px 0;
-}
 
-.no-bg article {
-  border: 2px solid #000000;
-  border-top: none;
-}
-
-article h2 {
-  font-size: 34px;
-  letter-spacing: 8px;
-  position: relative;
-  top: -24px;
-  /*display: flex;*/
-  /*justify-content: space-between;*/
-  /*align-items: center;*/
-}
-
-article h2::before,
-article h2::after {
-  content: "";
-  display: block; /*block*/
-  position: absolute;
-  height: 2px;
-  background-color: #000000;
-  width: 240px;
-  top: 24px;
-}
-
-article h2::before {
-  left: 0;
-}
-
-article h2::after {
-  right: 0;
-}
-
-article p {
-  padding: 0 188px;
-  margin-bottom: 20px;
-  font-weight: 300;
-}
-
-section.bg-section {
-  background: url("../images/services.jpg") no-repeat 0 0;
-  /*background-size: 100% auto; !*contain*!*/
-  padding: 130px;
-}
-
-@media screen and (min-width: 1920px) {
-  section.bg-section {
-    background-size: 100% auto;
-  }
-}
-
-.bg-section article {
-  border: 2px solid #ffffff;
-  border-top: none;
+.about-page {
+  background-color: #00bbbb;
   color: #ffffff;
 }
 
-.bg-section article h2::before,
-.bg-section article h2::after {
-  background-color: #ffffff;
-}
-
-.no-bg article .do {
-  padding-top: 100px;
-}
-
-.no-bg article .do img {
-  padding-bottom: 35px;
-}
-
-.no-bg article .do p {
-  padding-top: 35px;
-  font-size: 13px;
-}
-
-.no-bg article .do h3 {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.no-bg article .do:last-child {
-  padding-bottom: 70px;
-}
-
-.image-menu {
-  padding: 0;
-}
-
-.image-menu .flex-row {
+.about-page .wrapper {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 28px;
+  padding-bottom: 28px;
 }
 
-.image-item {
+.about-page__content {
+  width: 500px;
+}
+
+.about-page__img {
   position: relative;
-  margin: 0 5px;
+  left: -50px;
+  margin-right: 50px;
 }
 
-.image-item h3 {
-  position: absolute;
-  left: 30px;
-  bottom: 30px;
-  color: #ffffff;
-  font-size: 34px;
-  font-weight: 700;
-  letter-spacing: 3px;
-
+.about-page__content p {
+  margin-bottom: 20px;
 }
-
-
 
