@@ -67,7 +67,7 @@ header {
 
 header .wrapper {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .nav-row {
@@ -153,3 +153,62 @@ header ul li a:hover {
   margin-bottom: 20px;
 }
 
+.services-page {
+  background-color: #70bfff;
+}
+
+.services-container {
+  display: flex;
+  justify-content: space-between;
+  height: 790px;
+  align-items: center;
+}
+
+.services-page__img {
+  background: url("../images/img-service.png") no-repeat 100% 100%;
+  height: 527px;
+  text-align: center;
+  padding-top: 200px;
+}
+
+.services-page__img h2 {
+  color: #ffffff;
+  margin: auto 0;
+}
+
+.services-page__refs a {
+  display: flex;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  height: 100px;
+  width: 400px;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20px;
+
+}
+
+.services-page__refs span {
+  display: block;
+  padding: 20px;
+  text-align: center;
+}
+
+.services-page__refs span img {
+  width: 65px;
+}
+
+.services-page__refs span:first-child {
+  width: 300px;
+}
+
+.services-page__refs span:last-child {
+  border-left: 1px solid #000000;
+  width: 100px;
+  height: 100px;
+}
+
+.services-page__refs a:hover {
+  box-shadow: 0 4px 8px #000000;
+}
